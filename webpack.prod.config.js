@@ -10,6 +10,9 @@ module.exports = {
     filename: 'static/js/bundle.js'
   },
   // devtool: 'source-map',
+  resolve: {
+    extensions: [".js", ".json", ".jsx"]
+  },
   module:{
     rules: [
       {
@@ -18,7 +21,7 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['babel-preset-env','babel-preset-react']
+            presets: ['env','react','stage-0']
           }
         }
       },
